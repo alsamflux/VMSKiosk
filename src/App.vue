@@ -49,7 +49,7 @@
             <v-progress-linear color="grey" value="10" height="10"></v-progress-linear>
           </v-flex>
           <v-btn id="id1" v-if="pagefunction !== 'help'" class="yellow display-2" style="margin-right: 10px;padding:10px 30px 40px;"> <!-- second padding # is left-side/right-side padding -->
-              <span style="padding: 0px 0px 0px;">I Need Help...</span> <!-- 32x is pushing up -->
+              <span style="padding: 0px 0px 10px;">I Need Help...</span> <!-- 32x is pushing up -->
           </v-btn>
         </v-layout>
       </v-flex>
