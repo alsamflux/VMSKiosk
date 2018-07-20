@@ -1,4 +1,4 @@
-# newcli
+# VMSKiosk
 
 ## Project setup
 ```
