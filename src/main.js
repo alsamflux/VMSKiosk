@@ -29,7 +29,7 @@ const routes = [
 
 const router = new VueRouter({ 
   mode: 'history', 
-  base: __dirname,
+  base: __dirname, // CRITICAL to routing to next page!!!!!
   routes: routes 
 });
 
