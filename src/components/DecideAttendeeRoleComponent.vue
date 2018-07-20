@@ -1,12 +1,14 @@
 <template>
 <v-container fluid style="min-height: 0;" fill-height> <!-- fill-height makes it fill the view screen vertically, spreading all the objects out -->
     <v-layout column align-center>
-        <!-- <v-spacer></v-spacer> -->
-        <span class="deep-purple--text flex display-2 font-weight-regular font-italic">
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        
+        <div class="deep-purple--text flex display-2 font-weight-regular font-italic">
             
                          Welcome!
             
-        </span>
+        </div>
         <div class="deep-purple--text flex caption font-weight-regular">
             
                           to the
@@ -29,7 +31,8 @@
         <v-layout row wrap style="margin:0px 0px 0px">
             <v-flex justify-center> <!-- Very necessary to have buttons stay screen centered even if they wrap. https://stackoverflow.com/questions/46404884/vuetify-center-items-into-v-flex -->
                 <div class="text-xs-center">  <!-- Very necessary to have buttons stay screen centered even if they wrap. -->
-                    <v-btn :to="{ name: 'Post'}" flex class="green--text display-3 volunteeringbubble" 
+                    <v-btn :to="{ name: 'DecideVolunteerActingInSocialGroupCapacity'}" 
+                    flex class="green--text display-3 volunteeringbubble" 
                     style="margin-right:70px;padding:40px 100px 40px;box-shadow:0 0 20px green;"> <!-- margin-right keeps the buttons from butting up against each other. -->
                         <span flex style="padding:35px 0px 40px;">
                             

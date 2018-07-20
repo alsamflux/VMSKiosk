@@ -1,7 +1,5 @@
 <template>
   <v-app>  <!-- Critical to proper sizing of screen!  DO NOT USE div id="app" -->
-    <!-- https://nicolas-hoizey.com/2015/02/viewport-height-is-taller-than-the-visible-part-of-the-document-in-some-mobile-browsers.html -->
-    <!-- <img src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     
     <!-------------------------------------------------------------------------------------------------------------------------------->
@@ -24,9 +22,9 @@
 
     <!-------------------------------------------------------------------------------------------------------------------------------->
 
-     <v-content>
+     <!-- <v-content>
         <DecideAttendeeRole/>
-    </v-content>
+    </v-content> -->
 
     <!-------------------------------------------------------------------------------------------------------------------------------->
 
@@ -61,13 +59,14 @@
   </v-app>
 </template>
 
-
+<!--============================================================================================================================-->
 
 <script>
-import DecideAttendeeRole from './components/DecideAttendeeRoleComponent'
+  import DecideAttendeeRole from './components/DecideAttendeeRoleComponent'
+
   export default {
     name: 'app',
-    components: { DecideAttendeeRole },
+    components: { DecideAttendeeRole, DecideVolunteerActingInSocialGroupCapacity },
     data() {
         return {
             clipped: false,

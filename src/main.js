@@ -9,10 +9,8 @@ import 'es6-promise/auto'
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
-import HomeComponent from './components/HomeComponent.vue'
-import DashboardComponent from './components/DashboardComponent.vue'
-import PostComponent from './components/PostComponent.vue'
 import DecideAttendeeRoleComponent from './components/DecideAttendeeRoleComponent.vue'
+import DecideVolunteerActingInSocialGroupCapacityComponent from './components/DecideVolunteerActingInSocialGroupCapacityComponent.vue'
 
 //import 'bootstrap/dist/css/bootstrap.min.css';
 //import 'vuetify/dist/vuetify.min.css'
@@ -24,10 +22,8 @@ Vue.config.productionTip = false
   2. The 'path' doesn't seem to matter;  in the vue file, only the Name is referenced. "<router-link :to="{ name: 'Post' }" class="nav-link">Post</router-link>"
 */
 const routes = [
-  { path: 'home', name: 'Home', component: HomeComponent },
-  { path: 'post', name: 'Post', component: PostComponent },
-  { path: 'dashboard', name: 'Dashboard', component: DashboardComponent },
-  { path: 'role', name: 'DecideAttendeeRole', component: DecideAttendeeRoleComponent },
+  { path: '/', name: 'DecideAttendeeRole', component: DecideAttendeeRoleComponent }, /* The main default page must be / */
+  { path: 'socialcapacity', name: 'DecideVolunteerActingInSocialGroupCapacity', component: DecideVolunteerActingInSocialGroupCapacityComponent },
 ];
 
 const router = new VueRouter({ mode: 'history', routes: routes });
