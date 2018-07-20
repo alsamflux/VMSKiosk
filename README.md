@@ -1,4 +1,5 @@
 # VMSKiosk
+This is an experimental kiosk using vueitify as the base framework.
 
 ## Project setup
 ```
