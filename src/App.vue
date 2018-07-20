@@ -22,12 +22,6 @@
 
     <!-------------------------------------------------------------------------------------------------------------------------------->
 
-     <!-- <v-content>
-        <DecideAttendeeRole/>
-    </v-content> -->
-
-    <!-------------------------------------------------------------------------------------------------------------------------------->
-
     <v-footer :fixed="fixed" style="padding: 0px 0px 114px;padding-left:32px;"> <!-- AHA! padding 32x pushes it UP from the bottom of the screen -->
       <v-layout column wrap>
 
@@ -62,11 +56,9 @@
 <!--============================================================================================================================-->
 
 <script>
-  import DecideAttendeeRole from './components/DecideAttendeeRoleComponent'
 
   export default {
     name: 'app',
-    components: { DecideAttendeeRole, DecideVolunteerActingInSocialGroupCapacity },
     data() {
         return {
             clipped: false,

@@ -22,11 +22,16 @@ Vue.config.productionTip = false
   2. The 'path' doesn't seem to matter;  in the vue file, only the Name is referenced. "<router-link :to="{ name: 'Post' }" class="nav-link">Post</router-link>"
 */
 const routes = [
-  { path: '/', name: 'DecideAttendeeRole', component: DecideAttendeeRoleComponent }, /* The main default page must be / */
+  { path: '/', name: 'DecideAttendeeRole', component: DecideAttendeeRoleComponent 
+     }, /* The main default page must be / */
   { path: 'socialcapacity', name: 'DecideVolunteerActingInSocialGroupCapacity', component: DecideVolunteerActingInSocialGroupCapacityComponent },
 ];
 
-const router = new VueRouter({ mode: 'history', routes: routes });
+const router = new VueRouter({ 
+  mode: 'history', 
+  base: __dirname,
+  routes: routes 
+});
 
 const store = new Vuex.Store({
   state: {
