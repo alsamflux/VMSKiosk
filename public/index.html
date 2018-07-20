@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>VMS Kiosk</title>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag. -->
+      <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">  <!-- tags don't actually stop user zooming in chrome -->
+      <link rel="icon" href="<%= BASE_URL %>favicon.ico"> <!-- Shows up in tab of chrome -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100:300,400,500,700,900|Material+Icons">
+      <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'>
+      <link rel="stylesheet" type="text/css" href="css/jquery.tooltip.css" />
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- https://blog.jquery.com/2018/01/20/jquery-3-3-1-fixed-dependencies-in-release-tag/ -->
+  
+      <!-- Items below MUST be after jquery initialization -->
+  
+      <!-- https://www.jqueryscript.net/tooltip/Speech-Bubble-Like-jQuery-Tooltip-Plugin-jtooltip.html -->
+      
+      <script type="text/javascript" src="scripts/jquery.tooltip.js"></script>
+
+          <!-- http://www.uitrick.com/javascript/prevent-browser-zoom-feature-from-both-keyboard-and-mousectrl-using-jquery-javascript/ -->
+    
+      <script>
+        //Prevent zoom while using ctrl and mouse wheel
+        $(window).bind('mousewheel DOMMouseScroll', function(e)
+        {
+            //ctrl key is pressed
+            if(e.ctrlKey == true)
+            {
+                e.preventDefault();
+
+                //Your logic here
+                console.log("Zoom Feature Disabled. ctrl+Mousewheel Pressed");        
+            }
+        });
+      </script>
+
+    </head>
+  
+  <body>
+    <noscript>
+      <strong>We're sorry but history doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
