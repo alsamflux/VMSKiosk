@@ -3,6 +3,9 @@
     <!-- https://nicolas-hoizey.com/2015/02/viewport-height-is-taller-than-the-visible-part-of-the-document-in-some-mobile-browsers.html -->
     <!-- <img src="./assets/logo.png"> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+    
     <v-toolbar app>
         <v-toolbar-title v-text="title"></v-toolbar-title>
         <v-spacer></v-spacer>
@@ -14,23 +17,51 @@
           </v-btn> 
         </v-fab-transition>
     </v-toolbar>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+
     <router-view></router-view>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+
      <v-content>
         <DecideAttendeeRole/>
     </v-content>
-    <v-footer :fixed="fixed" style="padding: 0px 0px 34px;padding-left:32px;"> <!-- AHA! padding 32x pushes it UP from the bottom of the screen -->
-         <v-layout align-end row justify-space-between> <!-- justify between makes HELP button go to far edge -->
-              <!-- https://vuetifyjs.com/en/layout/spacing -->
-              <v-flex style="padding: 0px 0px 10px;padding-right:10px;max-width:200px;"> <!-- The padding 3rd number works great at pushing the progress bar up off the floor;padding-right will force space between next object, but the object will still resize too big and too small, so use max-size -->
-                <v-progress-linear color="grey" value="10" height="10"></v-progress-linear>
-              </v-flex>
-              <v-btn v-if="pagefunction !== 'help'" class="yellow display-2" style="margin-right:10px;padding:10px 30px 40px;"> <!-- second padding # is left-side/right-side padding -->
-                  <span style="padding: 0px 0px 0px;">I Need Help...</span> <!-- 32x is pushing up -->
-              </v-btn>
+
+    <!-------------------------------------------------------------------------------------------------------------------------------->
+
+    <v-footer :fixed="fixed" style="padding: 0px 0px 114px;padding-left:32px;"> <!-- AHA! padding 32x pushes it UP from the bottom of the screen -->
+      <v-layout column wrap>
+
+      <v-flex> <!-- justify between makes HELP button go to far edge -->
+        <v-layout align-end column justify-space-between> <!-- justify between makes HELP button go to far edge -->
+          <img src="./assets/VolunteerServicesCoordinator.png">
+          <div class="deep-purple--text flex caption font-weight-regular">Volunteer Services Coordinator</div> 
+          <div class="deep-purple--text flex caption font-weight-regular">Jo Ann Daron - (208) 780-1700</div> 
         </v-layout>
+      </v-flex>
+
+
+      <v-flex> <!-- justify between makes HELP button go to far edge -->
+        <v-layout align-end row justify-space-between> <!-- justify between makes HELP button go to far edge -->
+          <!-- https://vuetifyjs.com/en/layout/spacing -->
+          <v-flex style="padding: 20px 20px 10px;padding-right:10px;max-width:200px;"> <!-- The padding 3rd number works great at pushing the progress bar up off the floor;padding-right will force space between next object, but the object will still resize too big and too small, so use max-size -->
+            <v-progress-linear color="grey" value="10" height="10"></v-progress-linear>
+          </v-flex>
+          <v-btn id="id1" v-if="pagefunction !== 'help'" class="yellow display-2" style="margin-right: 10px;padding:10px 30px 40px;"> <!-- second padding # is left-side/right-side padding -->
+              <span style="padding: 0px 0px 0px;">I Need Help...</span> <!-- 32x is pushing up -->
+          </v-btn>
+        </v-layout>
+      </v-flex>
+
+
+      </v-layout>
     </v-footer> 
+
   </v-app>
 </template>
+
+
 
 <script>
 import DecideAttendeeRole from './components/DecideAttendeeRoleComponent'
